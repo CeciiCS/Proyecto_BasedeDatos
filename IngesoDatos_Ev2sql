@@ -1,0 +1,264 @@
+-- Ingreso de cursos
+insert into programa values (1,'FullStack Java Trainee');
+insert into programa values (2,'Programación Android');
+-------------------------------------------------------------------------------------------------------------------------------
+-- Ingreso de estudiantes
+insert into estudiante values ('166467454','Cecilia','Crisostomo','Santander',1);
+insert into estudiante values ('132567465','Josefa','Celis','Jofre',1);
+insert into estudiante values ('113456759','Camila','Ortiz','Ortiz',1);
+insert into estudiante values ('19564767k','Pamela','Leiva','Flores',1);
+insert into estudiante values ('123425552','Maria','Riquelme','Letelier',1);
+insert into estudiante values ('163452340 ','Belen','Diaz','Fuentes',1);
+insert into estudiante values ('167459872','Graciela','Rolando','Cartes',1);
+insert into estudiante values ('154359870','Daniela','Fuentes','Morales',1);
+insert into estudiante values ('176537652','Valeria','Millan','Ruiz',1);
+insert into estudiante values ('20198435k ','Paola','Mardones','Contreras',1);
+
+insert into estudiante values ('166467454','Cecilia','Crisostomo','Santander',2);
+insert into estudiante values ('822223333','Fabian','Leiva','Neira',2);
+insert into estudiante values ('733334444','Pedro','Engel','Gonzales',2);
+insert into estudiante values ('144445555','Sebastian','Soto','Soto',2);
+insert into estudiante values ('555556666','Jose','Mardones','Yañez',2);
+insert into estudiante values ('466667777','Rolando','Ardiles','Roman',2);
+insert into estudiante values ('777778888','Geronimo','Larenas','Ortuzar',2);
+insert into estudiante values ('688889999','Raul','Altamirano','Diaz',2);
+insert into estudiante values ('999991111','Luis','Guerra ','Martinez',2);
+insert into estudiante values ('211114444','Sergio','Linares','Ardaza',2);
+-------------------------------------------------------------------------------------------------------------------------------
+--Curso 1,'FullStack Java Trainee'
+insert into unidad values (1,'Programacion Trainee en Java',1);
+insert into unidad values (2,'Base de Datos',1);
+
+--Curso 2,'Programación Android'
+
+insert into unidad values (3,'Programacion Inicial en Android',2);
+insert into unidad values (4,'Herramientas de Diseño en Android',2);
+-------------------------------------------------------------------------------------------------------------------------------
+--Script llenado datos Test:
+
+--Curso 1,'FullStack Java Trainee'
+
+
+insert into test values (1,'Evaluación1','Evaluación POO y BBDD', 'Cecilia Crisostomo Santander','28-05-2020',1,2);
+--TO_DATE('26-05-2020','DD-MM-YYYY')
+
+--Curso 2,'Programación Android'
+
+insert into test values (2,'Evaluación1','Evaluación conocimientos Programación Android', 'Cecilia Crisostomo Santander','28-05-2020',2,3);
+-------------------------------------------------------------------------------------------------------------------------------
+
+--carga tabla pregunta, para test , programa 1: --Curso 1,'FullStack Java Trainee'
+
+--valorlogico  0=true, 1= false
+
+insert into pregunta values (1, '¿Cuales son los objetivos principales de los SGBD?', 10, 1);
+
+insert into alternativa values (1,'a) Independencia de datos', 0, 0.35,1);
+insert into alternativa values (2,'b) Integridad de datos', 0, 0.35,1);
+insert into alternativa values (3,'c) Seguridad de datos', 0, 0.30,1);
+insert into alternativa values (4,'d) Calidad de datos', 1, 0,1);
+------------------------------------------------------------------------------------------------------------------------------
+insert into pregunta values (2, '¿Qué es la programacion orientada a objetos (POO)?', 10, 1);
+
+insert into alternativa values (5,'a) Un paradigma de la programación', 0, 0.25,2);
+insert into alternativa values (6,'b) Tipo de programación que expresa con mayor cercanía las cosas de la vida real', 0, 0.25,2);
+insert into alternativa values (7,'c) Permite desarrollar cosas complejas manteniendo mayor claridad en el código', 0, 0.25,2);
+insert into alternativa values (8,'d) Sus características más importantes son: abstracción, encapsulación, herencia y polimorfismo', 0, 0.25,2);
+-------------------------------------------------------------------------------------------------------------------------------
+insert into pregunta values (3, '¿Cuáles son las ventajas al usar POO?:', 10, 1);
+
+insert into alternativa values (9,'a) Reusabilidad y Mantenibilidad', 0, 0.50,3);
+insert into alternativa values (10,'b) Modificabilidad', 0, 0.25,3);
+insert into alternativa values (11,'c) Fiabilidad', 0, 0.25,3);
+insert into alternativa values (12,'d) Administrar bases de datos', 1, 0,3);
+-------------------------------------------------------------------------------------------------------------------------------
+insert into pregunta values (4, '¿Qué es un IDE en programación?', 10, 1);
+
+insert into alternativa values (13,'a) Es un editor de código y un depurador', 0, 0.25,4);
+insert into alternativa values (14,'b) Compilador', 0, 0.25,4);
+insert into alternativa values (15,'c) Constructor de interfaz gráfica', 0, 0.25,4);
+insert into alternativa values (16,'d) Es un programa informático compuesto por un conjunto de herramientas de programación', 0, 0.25,4);
+-------------------------------------------------------------------------------------------------------------------------------
+insert into pregunta values (5, '¿Qué es la herencia en POO?', 10, 1);
+
+insert into alternativa values (17,'a) Es el Main del programa', 1, 0,5);
+insert into alternativa values (18,'b) Es parte del menú del Sqlserver', 1, 0,5);
+insert into alternativa values (19,'c) Es donde una clase nueva se crea de una clase existente', 0, 0.50,5);
+insert into alternativa values (20,'d) Aquí, la subclase contiene los atributos y métodos de la clase primaria', 0, 0.50,5);
+-------------------------------------------------------------------------------------------------------------------------------
+insert into pregunta values (6, '¿Qué es una clase abstracta?', 10, 1);
+
+insert into alternativa values (21,'a) Es una clase con 0 o más métodos sin implementar;', 0, 0.50,6);
+insert into alternativa values (22,'b) Se pueden crear objetos de estas clases;', 1, 0,6);
+insert into alternativa values (23,'c) Es una clase hija;', 1, 0,6);
+insert into alternativa values (24,'d) No se pueden crear objetos de estas clases;', 0, 0.50,6);
+-------------------------------------------------------------------------------------------------------------------------------
+insert into pregunta values (7, '¿Cuál instancia es válida dentro de una instrucción SQL?', 10, 1);
+
+insert into alternativa values (25,'a) INSERT * FROM Empleados;', 1, 0,6);
+insert into alternativa values (26,'b) SELECT * FROM Empleados;', 0, 0.50,6);
+insert into alternativa values (27,'c) DROP TABLE * Empleados;', 0, 0.50,6);
+insert into alternativa values (28,'d) UPDATE * FROM Empleados;', 1, 0,6);
+-------------------------------------------------------------------------------------------------------------------------------
+insert into pregunta values (8, '¿Qué es una base de datos?', 10, 1);
+
+insert into alternativa values (29,'a) Es una clase de POO;', 1, 0,8);
+insert into alternativa values (30,'b) Parte de una tabla de Sql;', 1, 0,8);
+insert into alternativa values (31,'c) Motor de búsqueda;', 1, 0,8);
+insert into alternativa values (32,'d) Es un tipo de "almacén" que permite guardar una gran cantidad de información de forma organizada ;', 0, 1,8);
+-------------------------------------------------------------------------------------------------------------------------------
+insert into pregunta values (9, 'El DBA es responsable de:', 10, 1);
+
+insert into alternativa values (33,'a) Administrar el DBMS', 0, 0.50,3);
+insert into alternativa values (34,'b) Administrar la estructura de la Base de Datos', 0, 0.25,3);
+insert into alternativa values (35,'c) Programar aplicación backend', 1, 0,3);
+insert into alternativa values (36,'d) Administrar la actividad de los datos', 0, 0.25,3);
+-------------------------------------------------------------------------------------------------------------------------------
+insert into pregunta values (10, '¿Qué tipo de restricciones puede ingresar el usuario en un modelo relacional?', 10, 1);
+
+insert into alternativa values (37,'a) Primary Key (PK);', 0, 0.50,10);
+insert into alternativa values (38,'b) Unique (U);', 0, 0.25,10);
+insert into alternativa values (39,'c) Foreign Key (FK);', 0, 0.50 ,10);
+insert into alternativa values (40,'d) DROP TABLE INTO * Emplados;', 1, 0,10);
+-------------------------------------------------------------------------------------------------------------------------------
+--carga tabla pregunta, para test 2, programa 2: --Curso 2,'Programación Android'
+
+--valorlogico  0=true, 1= false
+
+insert into pregunta values (11, '¿Cual es el resultado de la pregunta 1?', 10, 2);
+
+insert into alternativa values (41,'a) correcta', 0, 0.35,11);
+insert into alternativa values (42,'b) incorrecta', 1, 0,11);
+insert into alternativa values (43,'c) correcta', 0, 0.30,11);
+insert into alternativa values (44,'d) correcta', 0, 0.35,11);
+-------------------------------------------------------------------------------------------------------------------------------
+insert into pregunta values (12, '¿Cuál es el resultado de la pregunta 2?', 10, 2);
+
+insert into alternativa values (45,'a) correcta', 0, 0.25,12);
+insert into alternativa values (46,'b) correcta', 0, 0.25,12);
+insert into alternativa values (47,'c) correcta', 0, 0.25,12);
+insert into alternativa values (48,'d) correcta', 0, 0.25,12);
+-------------------------------------------------------------------------------------------------------------------------------
+insert into pregunta values (13, '¿Cuál es el resultado de la pregunta 3?', 10, 2);
+
+insert into alternativa values (49,'a) correcta', 0, 0.50,13);
+insert into alternativa values (50,'b) correcta', 0, 0.25,13);
+insert into alternativa values (51,'c) correcta', 0, 0.25,13);
+insert into alternativa values (52,'d) incorrecta', 1, 0,13);
+-------------------------------------------------------------------------------------------------------------------------------
+insert into pregunta values (14, '¿Cuál es el resultado de la pregunta 4?', 10, 2);
+
+insert into alternativa values (53,'a) correcta', 0, 0.25,14);
+insert into alternativa values (54,'b) correcta', 0, 0.25,14);
+insert into alternativa values (55,'c) correcta', 0, 0.25,14);
+insert into alternativa values (56,'d) correcta', 0, 0.25,14);
+-------------------------------------------------------------------------------------------------------------------------------
+insert into pregunta values (15, '¿Cuál es el resultado de la pregunta 5?', 10, 2);
+
+insert into alternativa values (57,'a) incorrecta', 1, 0,15);
+insert into alternativa values (58,'b) correcta', 0, 0.5,15);
+insert into alternativa values (59,'c) correcta', 0, 0.5,15);
+insert into alternativa values (60,'d) incorrecta', 1, 0,15);
+-------------------------------------------------------------------------------------------------------------------------------
+insert into pregunta values (16, '¿Cuál es el resultado de la pregunta 6?', 10, 2);
+
+insert into alternativa values (61,'a) correcta', 0, 0.5,16);
+insert into alternativa values (62,'b) incorrecta', 1, 0,16);
+insert into alternativa values (63,'c) correcta', 0, 0.5,16);
+insert into alternativa values (64,'d) incorrecta', 1, 0,16);
+-------------------------------------------------------------------------------------------------------------------------------
+insert into pregunta values (17, '¿Cuál es el resultado de la pregunta 7?', 10, 2);
+
+insert into alternativa values (65,'a) incorrecta', 1, 0,17);
+insert into alternativa values (66,'b) correcta', 0, 1,17);
+insert into alternativa values (67,'c) incorrecta', 1, 0,17);
+insert into alternativa values (68,'d) incorrecta', 1, 0,17);
+-------------------------------------------------------------------------------------------------------------------------------
+insert into pregunta values (18, '¿Cuál es el resultado de la pregunta 8?', 10, 2);
+
+insert into alternativa values (69,'a) incorrecta', 1, 0,18);
+insert into alternativa values (70,'b) incorrecta', 1, 0,18);
+insert into alternativa values (71,'c) correcta', 0, 1,18);
+insert into alternativa values (72,'d) incorrecta', 1, 0,18);
+-------------------------------------------------------------------------------------------------------------------------------
+insert into pregunta values (19, '¿Cuál es el resultado de la pregunta 9?', 10, 2);
+
+insert into alternativa values (73,'a) incorrecta', 1, 0,19);
+insert into alternativa values (74,'b) incorrecta', 1, 0,19);
+insert into alternativa values (75,'c) incorrecta', 1, 0,19);
+insert into alternativa values (76,'d) correcta', 0, 1,19);
+-------------------------------------------------------------------------------------------------------------------------------
+insert into pregunta values (20, '¿Cuál es el resultado de la pregunta 10?', 10, 2);
+
+insert into alternativa values (77,'a) incorrecta', 1, 0,20);
+insert into alternativa values (78,'b) incorrecta', 1, 0,20);
+insert into alternativa values (79,'c) correcta', 0, 1,20);
+insert into alternativa values (80,'d) incorrecta', 1, 0,20);
+-------------------------------------------------------------------------------------------------------------------------------
+--Carga Tabla Resultado_test
+select * from resultadotest;
+select * from test;
+select * from pregunta;
+select * from alternativa;
+--delete from resultadotest;
+
+insert into resultadotest values (1,'',1,1,'166467454');
+insert into resultadotest values (2,'',1,1,'166467454');
+insert into resultadotest values (3,'',1,1,'166467454');
+insert into resultadotest values (5,'',2,1,'166467454');
+insert into resultadotest values (6,'',2,1,'166467454');
+insert into resultadotest values (7,'',2,1,'166467454');
+insert into resultadotest values (8,'',2,1,'166467454');
+insert into resultadotest values (9,'',3,1,'166467454');
+insert into resultadotest values (10,'',3,1,'166467454');
+insert into resultadotest values (11,'',3,1,'166467454');
+insert into resultadotest values (13,'',4,1,'166467454');
+insert into resultadotest values (14,'',4,1,'166467454');
+insert into resultadotest values (15,'',4,1,'166467454');
+insert into resultadotest values (16,'',4,1,'166467454');
+insert into resultadotest values (19,'',5,1,'166467454');
+insert into resultadotest values (20,'',5,1,'166467454');
+insert into resultadotest values (21,'',6,1,'166467454');
+insert into resultadotest values (24,'',6,1,'166467454');
+insert into resultadotest values (26,'',7,1,'166467454');
+insert into resultadotest values (27,'',7,1,'166467454');
+insert into resultadotest values (32,'',8,1,'166467454');
+insert into resultadotest values (33,'',9,1,'166467454');
+insert into resultadotest values (34,'',9,1,'166467454');
+insert into resultadotest values (36,'',9,1,'166467454');
+insert into resultadotest values (37,'',10,1,'166467454');
+insert into resultadotest values (38,'',10,1,'166467454');
+insert into resultadotest values (39,'',10,1,'166467454');
+-------------------------------------------------------------------------------------------------------------------------------
+--Consultas a la tabla
+--Preguntas
+
+--1. Conocer las evaluaciones por curso
+select * from estudiante;
+select * from test;
+
+select count (programa_idprog) from estudiante; -- Total de evaluaciones de ambos cursos
+select count (*) from estudiante where programa_idprog=1; --1= FullStack Java Trainee
+select count (*) from estudiante where programa_idprog=2; --2= Programación Android
+
+--2. Conocer los cursos sin evaluaciones
+
+select count (*) from test where idtest<>1 and idtest<>2;
+
+--3. Determinar las evaluaciones con deficiencia. Una evaluación es deficiente:
+select * from pregunta;
+select * from alternativa;
+select * from resultadotest;
+
+--a. Si no tiene preguntas.
+select test.nombre from test where not exists
+(select null from pregunta where test_idtest=pregunta.test_idtest);
+
+--b. Si hay preguntas con 2 ó menos alternativas
+select * from pregunta inner join alternativa on pregunta.idpregunta = alternativa.pregunta_idpregunta;
+
+select count (*) 
+select * from pregunta inner join alternativa on pregunta.idpregunta = alternativa.pregunta_idpregunta;
+
+--c. Si todas las alternativas son correctas o si todas las alternativas son incorrectas.
+
